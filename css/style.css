@@ -1,0 +1,25 @@
+/*
+TO DO:
+1. Add key binding to translate button
+2. clear output when button clicked
+3. Handle punctuation and ints
+*/
+
+body{
+  min-height: 680px;
+}
+
+.jumbotron {
+  background: url(pig.jpeg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height:inherit;
+}
+
+.jumbotron h1 {
+  color: whitesmoke;
+}
+
+.output{
+  background-color: rgba(255, 255, 255, 0.6);
+}
