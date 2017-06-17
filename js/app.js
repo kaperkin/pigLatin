@@ -1,9 +1,21 @@
 (function ($) {
 
+$('#output').hide();
+
 function translateWord(str) {
   var sA = str.split("");
+  console.log(sA);
   var count = str.length;
   var vowels = ['a','e','i','o','u','y'];
+  var punctuation = [' ','.',',','?','!','@','#','$','%','^','&','*','(',')','_','-','+','=','<','>',':',';','"',
+  "'","{","}",'|','\\','[',']','~','``'];
+  var punc = "";
+  var lastChar = sA.pop();
+  if(punctuation.indexOf(lastChar)!=-1){
+    punc = lastChar;
+  } else{
+    sA.push(lastChar);
+  };
   //for loop returns index of first vowel
   for(var i=0; i<vowels.length; i++){
     if((sA.indexOf(vowels[i]) > -1) && ((sA.indexOf(vowels[i]) < count))){
@@ -19,27 +31,22 @@ function translateWord(str) {
   //strip out all commas
   str = str.replace(/,/g,'');
   if(count===0){
-    return(str + 'way');
+    return(str + 'way' + punc);
   } else{
-  return  str +'ay';
+  return  (str + 'ay' + punc);
   }
 }
 
 function translateBtnClicked(){
+  $('#output').empty();
+  $('#output').show();
   var input = $("input").val();
   input = input.split(" ");
   var output = "";
-  var punctuation = ['.',',','?','!','@','#','$','%','^','&','*','(',')','_','-','+','=','<','>',':',';','"',"'","{","}",'|','\\','[',']','~','`']
   for(var i = 0; i <input.length; i++){
-    if(punctuation.indexOf(input[i]) != -1){
     var word = translateWord(input[i]);
     output += word + " ";
-    console.log("Output: " + output);
-  }else{
-    output += input[i];
   }
-}
-
   $('#output').append("<div>"+ output + "</div>");
 }
 

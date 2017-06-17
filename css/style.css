@@ -1,8 +1,9 @@
 /*
 TO DO:
 1. Add key binding to translate button
-2. clear output when button clicked
-3. Handle punctuation and ints
+2. clear output when button clicked DONE
+3. Handle punctuation DONE
+4. handle ints in input
 */
 
 body{
@@ -22,4 +23,5 @@ body{
 
 .output{
   background-color: rgba(255, 255, 255, 0.6);
+  overflow-y: scroll;
 }
