@@ -4,6 +4,8 @@ TO DO:
 2. clear output when button clicked DONE
 3. Handle punctuation DONE
 4. handle ints in input
+5. set jumbotron height dynamically DONE
+6. Add footer DONE
 */
 
 body{
@@ -15,13 +17,40 @@ body{
   background-size: 100% 100%;
   background-repeat: no-repeat;
   min-height:inherit;
+  margin-bottom: 0;
 }
 
 .jumbotron h1 {
-  color: whitesmoke;
+  color: #f5f5f5;
 }
 
 .output{
   background-color: rgba(255, 255, 255, 0.6);
   overflow-y: scroll;
+}
+
+.foot {
+  background-color: rgb(62,41,46);
+  margin-bottom: 0;
+  margin-left: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+}
+
+.foot p {
+  color:#f5f5f5;
+  margin-bottom: 0;
+  padding-top: 6px;
+}
+
+.foot p a {
+  color: rgb(214,225,165);
+}
+
+.foot p a:hover, .foot p a:active {
+  color: rgb(164,192,143);
 }

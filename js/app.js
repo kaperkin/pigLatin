@@ -1,6 +1,9 @@
 (function ($) {
 
 $('#output').hide();
+var height = $(window).height();   // returns height of browser viewport
+$('#jumbotron').css("height", height-100);
+
 
 function translateWord(str) {
   var sA = str.split("");
