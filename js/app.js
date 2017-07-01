@@ -7,7 +7,6 @@ $('#jumbotron').css("height", height-100);
 
 function translateWord(str) {
   var sA = str.split("");
-  console.log(sA);
   var count = str.length;
   var vowels = ['a','e','i','o','u','y'];
   var punctuation = [' ','.',',','?','!','@','#','$','%','^','&','*','(',')','_','-','+','=','<','>',':',';','"',
@@ -29,15 +28,21 @@ function translateWord(str) {
   var end = sA.splice(count, sA.length);
   // front of sA until firs vowel
   var front = sA.splice(0, count);
+  if(front[0]){
+  if(front[0].toUpperCase()==front[0]){
+    front[0] = front[0].toLowerCase();
+    end[0] = end[0].toUpperCase();
+  }
+}
   //string of end + front
   str = end + front;
   //strip out all commas
   str = str.replace(/,/g,'');
   if(count===0){
     return(str + 'way' + punc);
-  } else{
+  } else {
   return  (str + 'ay' + punc);
-  }
+}
 }
 
 function translateBtnClicked(){
@@ -50,15 +55,22 @@ function translateBtnClicked(){
     if(Number(input[i])){
       output += input[i] + " ";
     } else {
-    var word = translateWord(input[i]);
-    output += word + " ";
-  }
+      var word = translateWord(input[i]);
+      output += word + " ";
+    }
   }
   $('#output').append("<div>"+ output + "</div>");
 }
 
 $("#translateBtn").click(function(){
   translateBtnClicked();
-})
+});
+
+// add keybinding for enter to trigger submit click
+$('#input').keypress(function(e){
+  if(e.which == 13){//Enter key pressed
+    $('#translateBtn').click();//Trigger search button click event
+  }
+});
 
 }(jQuery));
