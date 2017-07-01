@@ -47,8 +47,12 @@ function translateBtnClicked(){
   input = input.split(" ");
   var output = "";
   for(var i = 0; i <input.length; i++){
+    if(Number(input[i])){
+      output += input[i] + " ";
+    } else {
     var word = translateWord(input[i]);
     output += word + " ";
+  }
   }
   $('#output').append("<div>"+ output + "</div>");
 }
