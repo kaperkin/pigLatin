@@ -26,6 +26,7 @@ function translateWord(str) {
   }
    //end of sA from vowel to end
   var end = sA.splice(count, sA.length);
+  console.log(end);
   // front of sA until firs vowel
   var front = sA.splice(0, count);
   if(front[0]){
@@ -48,7 +49,7 @@ function translateWord(str) {
 function translateBtnClicked(){
   $('#output').empty();
   $('#output').show();
-  var input = $("input").val();
+  var input = $("#input").val();
   input = input.split(" ");
   var output = "";
   for(var i = 0; i <input.length; i++){

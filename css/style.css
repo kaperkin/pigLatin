@@ -1,12 +1,17 @@
 /*
 TO DO:
-1. Add key binding to translate button DONE
-2. Handle Capitalization DONE
+1. Handle word "At"
+2.
 3.
 */
 
 body{
   min-height: 680px;
+}
+
+input, .output{
+  padding: 1rem;
+  height: auto;
 }
 
 .jumbotron {

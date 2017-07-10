@@ -33,8 +33,13 @@
       <div class="container">
     <h1 class="">Pig Latin</h1>
 <div class="row">
-    <input type="text" id="input"></input>
+  <div class='form-inline'>
+    <div class='form-group'>
+    <label class="sr-only" for="input">Text to translate</label>
+    <textarea type="text" class='form-control' id="input"></textarea>
     <button type="button" class="btn btn-default" id="translateBtn">Translate</button>
+  </div>
+  </div>
   </div>
   <div class="row">
     <div class='output col-lg-6' id='output'></div>
