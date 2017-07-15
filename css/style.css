@@ -1,12 +1,13 @@
 /*
 TO DO:
-1. Handle word "At"
-2.
+1. Handle word "At" DONE
+2. Add background color DONE
 3.
 */
 
-body{
-  min-height: 680px;
+body, .jumbotron{
+  height: 100%;
+  background-color: rgb(62,41,46);
 }
 
 input, .output{
@@ -24,6 +25,7 @@ input, .output{
 
 .jumbotron h1 {
   color: #f5f5f5;
+  text-shadow: 1px 1px 5px rgb(62, 41, 46);
 }
 
 .output{
