@@ -17,10 +17,10 @@ input, .output{
 
 .jumbotron {
   background: url(pig.jpeg);
-  background-size: 100% 100%;
   background-repeat: no-repeat;
   min-height:inherit;
-  margin-bottom: 0;
+  margin: auto;
+  max-width: 1500px;
 }
 
 .jumbotron h1 {
@@ -35,14 +35,14 @@ input, .output{
 
 .foot {
   background-color: rgb(62,41,46);
-  margin-bottom: 0;
-  margin-left: 0;
+  margin: auto;
+  max-width: 1500px;
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100px;
+  padding: 25px 0 30px 0;
 }
 
 .foot p {
@@ -57,4 +57,18 @@ input, .output{
 
 .foot p a:hover, .foot p a:active {
   color: rgb(164,192,143);
+}
+
+@media (max-width: 700px) {
+  .foot p {
+    text-align: center;
+  }
+  .jumbotron{
+    background-image: url(pig2.png);
+  }
+}
+@media (max-width: 960px) {
+  .jumbotron{
+    background-size: cover;
+  }
 }
